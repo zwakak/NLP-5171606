@@ -1,6 +1,5 @@
 const fs = require('fs');
 
-// Define the recovery steps for each data loss cause
 const recoverySteps = {
     "accidental deletion": [
         "Check Recycle Bin for deleted files.",
@@ -64,7 +63,6 @@ const dataLossCauses = ["accidental deletion",
     "virus infection",
     "physical damage"];
 
-// Function to generate recovery steps based on the provided parameters
 function generateRecoverySteps(os, deviceType, fileType, dataLossCause) {
     const steps = recoverySteps[dataLossCause];
     if (!steps) {
@@ -91,5 +89,4 @@ for (const os of operatingSystems) {
     }
 }
 console.log(records.length)
-// Write records to a JSON file
 fs.writeFileSync('generatedRecords.json', JSON.stringify(records, null, 2));
