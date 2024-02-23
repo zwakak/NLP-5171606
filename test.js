@@ -53,7 +53,6 @@ const recoverySteps = {
     ]
 };
 
-// Sample options for each parameter
 const operatingSystems = ["windows", "linux", "macos", "android", "ios"];
 const deviceTypes = ["usb", "solid state drives", "hard drive",
     "desktop", "camera", "laptop", "mobile", "sd card"];
